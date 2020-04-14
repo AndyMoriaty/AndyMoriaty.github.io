@@ -117,6 +117,21 @@
     <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-飞跃群">
+
+    <a href="/feiyuequn/" rel="section"><i class="fa fa-fw fa-th"></i>飞跃群</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>Categories</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
@@ -162,14 +177,14 @@
 
       <div class="post-meta">
         <time itemprop="dateCreated"
-              datetime="2020-03-02T21:29:24+08:00"
-              content="2020-03-02">
-          03-02
+              datetime="2020-04-12T17:03:30+08:00"
+              content="2020-04-12">
+          04-12
         </time>
       </div>
 
       <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/02/hello-world/" itemprop="url">
+          <a class="post-title-link" href="/2020/04/12/test2/" itemprop="url">
             <span itemprop="name">Hello World</span>
           </a>
       </h2>
@@ -189,7 +204,7 @@
       </div>
 
       <h2 class="post-title">
-          <a class="post-title-link" href="/2020/03/02/test2/" itemprop="url">
+          <a class="post-title-link" href="/2020/03/02/hello-world/" itemprop="url">
             <span itemprop="name">Hello World</span>
           </a>
       </h2>
@@ -301,6 +316,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Andy Moriaty"
+      src="/uploads/avatar.jpeg">
   <p class="site-author-name" itemprop="name">Andy Moriaty</p>
   <div class="site-description" itemprop="description">我的个人网页</div>
 </div>
@@ -312,6 +329,10 @@
           <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span>
       </div>
   </nav>
 </div>
@@ -390,6 +411,25 @@
 
 
 
+<script>
+if (document.querySelectorAll('div.pdf').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/pdfobject@2/pdfobject.min.js', () => {
+    document.querySelectorAll('div.pdf').forEach(element => {
+      PDFObject.embed(element.getAttribute('target'), element, {
+        pdfOpenParams: {
+          navpanes : 0,
+          toolbar  : 0,
+          statusbar: 0,
+          pagemode : 'thumbs',
+          view     : 'FitH'
+        },
+        PDFJS_URL: '/lib/pdf/web/viewer.html',
+        height   : element.getAttribute('height') || '500px'
+      });
+    });
+  }, window.PDFObject);
+}
+</script>
 
 
 
